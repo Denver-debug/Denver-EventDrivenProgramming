@@ -28,11 +28,11 @@ import path from "path";
 import session from "express-session";
 import flash from "connect-flash";
 import router from "./routes/index.js";
-import denver1 from "./routes/denverRoute1.js";
-import denver2 from "./routes/denverRoute2.js";
-import denver3 from "./routes/denverRoute3.js";
-import denver4 from "./routes/denverRoute4.js";
-import denver5 from "./routes/denverRoute5.js";
+import denverRoute1 from "./routes/denverRoute1.js";
+import denverRoute2 from "./routes/denverRoute2.js";
+import denverRoute3 from "./routes/denverRoute3.js";
+import denverRoute4 from "./routes/denverRoute4.js";
+import denverRoute5 from "./routes/denverRoute5.js";
 import fs from "fs";
 import hbs from "hbs";
 import { fileURLToPath } from "url";
@@ -107,11 +107,11 @@ fs.readdir(partialsDir, (err, files) => {
 });
 
 app.use("/", router);
-app.use("/denver1", denver1);
-app.use("/denver2", denver2);
-app.use("/denver3", denver3);
-app.use("/denver4", denver4);
-app.use("/denver5", denver5);
+app.use("/denver1", denverRoute1);
+app.use("/denver2", denverRoute2);
+app.use("/denver3", denverRoute3);
+app.use("/denver4", denverRoute4);
+app.use("/denver5", denverRoute5);
 
 export default app;
 
